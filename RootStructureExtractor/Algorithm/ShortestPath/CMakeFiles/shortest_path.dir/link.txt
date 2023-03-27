@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -fPIC -o -pthread -O3 -O3 -DNDEBUG  -shared -Wl,-soname,libshortest_path.so -o ../Libs/libshortest_path.so CMakeFiles/shortest_path.dir/src/adapted_djikstra.cpp.o 
