@@ -1,0 +1,110 @@
+\relax 
+\citation{stingaciu2013in}
+\citation{metzner2015direct}
+\citation{moradi2009neutron}
+\citation{zhao20203d}
+\citation{stingaciu2013in}
+\citation{jin2016robust}
+\citation{zhao20203d}
+\citation{zhao20203d}
+\citation{dijkstra1959note}
+\citation{schulz2013plant}
+\citation{dijkstra1959note}
+\citation{Leitner2014}
+\citation{van2016quantitative}
+\citation{van2003python}
+\citation{ramachandran2011mayavi}
+\@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Given a (segmented) plant root MRI scan, first a largest connected component is extracted, followed by skeletonization of the LCC to create a root graph.\relax }}{1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {II}Related Work}{1}\protected@file@percent }
+\citation{uzman2019learning}
+\citation{zhao20203d}
+\citation{schafer2007planning}
+\citation{zalesky2008dt}
+\citation{jin2016robust}
+\citation{douglas1973algorithms}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:intr_raw}{{2a}{2}}
+\newlabel{sub@fig:intr_raw}{{a}{2}}
+\newlabel{fig:intr_seg}{{2b}{2}}
+\newlabel{sub@fig:intr_seg}{{b}{2}}
+\newlabel{fig:intr_lcc}{{2c}{2}}
+\newlabel{sub@fig:intr_lcc}{{c}{2}}
+\newlabel{fig:intr_extr}{{2d}{2}}
+\newlabel{sub@fig:intr_extr}{{d}{2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Overview of root structure extraction. MRI (a) is segmented using a 3D U-Net\nobreakspace  {}\cite  {zhao20203d} (b). The largest component connected to the shoot is identified (test-tube removed manually) (c). Gaps are closed and the root structure graph is extracted (d).\relax }}{2}\protected@file@percent }
+\newlabel{fig:intr}{{2}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {III}Root Data and Root Graph}{2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Extraction Pipeline}{2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {V}Largest Connected Component Extraction}{2}\protected@file@percent }
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Stage I - LCC Extraction\relax }}{2}\protected@file@percent }
+\newlabel{alg:extr}{{1}{2}}
+\citation{jin2016robust}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-A}}Radius Cost Map}{3}\protected@file@percent }
+\newlabel{sec:rad_cost}{{\mbox  {V-A}}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-B}}Shortest Path with Gap Closing}{3}\protected@file@percent }
+\newlabel{eq:cgap}{{2}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-C}}LCC extraction}{3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Skeletonization}{3}\protected@file@percent }
+\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces Stage II - Skeletonization\relax }}{3}\protected@file@percent }
+\newlabel{alg:skel}{{2}{3}}
+\citation{jin2016robust}
+\citation{douglas1973algorithms}
+\citation{zhao20203d}
+\newlabel{fig:skel_clean}{{3a}{4}}
+\newlabel{sub@fig:skel_clean}{{a}{4}}
+\newlabel{fig:skel_extr}{{3b}{4}}
+\newlabel{sub@fig:skel_extr}{{b}{4}}
+\newlabel{fig:skel_filled}{{3c}{4}}
+\newlabel{sub@fig:skel_filled}{{c}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Example skeletal branch extraction. From a found quench point (a) a path is connected (b) to the start point and the surrounding area is filled (c).\relax }}{4}\protected@file@percent }
+\newlabel{fig:skel}{{3}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-A}}Build Skeleton}{4}\protected@file@percent }
+\@writefile{loa}{\contentsline {algorithm}{\numberline {3}{\ignorespaces Curve Skeleton\relax }}{4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-B}}Adding a Branch}{4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-C}}Fill Volume}{4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-D}}Fill Node}{4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-E}}Interpolation}{4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {VII}Results}{4}\protected@file@percent }
+\newlabel{sec:results}{{VII}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-A}}Evaluation Method}{4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {VII-A}1}Evaluation Dataset}{4}\protected@file@percent }
+\citation{zhao20203d}
+\citation{zhao20203d}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Yellow: Extraction, Gray: Manual reconstruction. Green/Red: Extraction with/without corresponding manual reconstruction, Black/Blue: Manual reconstruction with/without corresponding extraction.\relax }}{5}\protected@file@percent }
+\newlabel{fig:gt_vs_extraction}{{4}{5}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {VII-A}2}Evaluation Scheme for the Reconstructions}{5}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Average Performance of extraction dependent on segmentation model, using $cut_z$. F1 is the average F1 score over all datapoints. It is not computed from average recall and precision. The distance tolerance used is 15. The models have been trained using different loss functions, see \cite  {zhao20203d}.\relax }}{5}\protected@file@percent }
+\newlabel{table:models}{{I}{5}}
+\newlabel{fig:rw10_3sdap8}{{5a}{5}}
+\newlabel{sub@fig:rw10_3sdap8}{{a}{5}}
+\newlabel{fig:noise_in_extr}{{5b}{5}}
+\newlabel{sub@fig:noise_in_extr}{{b}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Green: Extraction with corresponding manual reconstruction, Red: Extraction without corresponding manual reconstruction.\relax }}{5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-B}}Performance}{5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {VII-B}1}Performance based on Input}{5}\protected@file@percent }
+\newlabel{fig:4soil3d6_full}{{6a}{6}}
+\newlabel{sub@fig:4soil3d6_full}{{a}{6}}
+\newlabel{fig:4soil3d6_no_gt}{{6b}{6}}
+\newlabel{sub@fig:4soil3d6_no_gt}{{b}{6}}
+\newlabel{fig:4soil3d6_merge}{{6c}{6}}
+\newlabel{sub@fig:4soil3d6_merge}{{c}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Black: Manual reconstruction segments with corresponding extraction output. Blue: Manual reconstruction without corresponding extraction, Green: extraction with corresponding manual reconstruction , Red: extraction without corresponding Manual reconstruction.\relax }}{6}\protected@file@percent }
+\newlabel{fig:4soil3d6}{{6}{6}}
+\newlabel{fig:params_gl}{{7b}{6}}
+\newlabel{sub@fig:params_gl}{{b}{6}}
+\newlabel{fig:params_dl}{{7c}{6}}
+\newlabel{sub@fig:params_dl}{{c}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Average performance of the extraction over the complete dataset when changing one of the parameters. No $cut_z$ is used for these values.\relax }}{6}\protected@file@percent }
+\newlabel{fig:params_perfomance}{{7}{6}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {VII-B}2}Performance Based on Parameterization}{6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Black: Manual reconstruction segments with corresponding extraction output. Blue: Manual reconstruction without corresponding extraction, Green: extraction with corresponding manual reconstruction , Red: extraction without corresponding manual reconstruction. The manual reconstruction shows intricate arc-like structures while the volume only holds these structures for a single branch. The missing volume information lead to wrong extraction.\relax }}{7}\protected@file@percent }
+\newlabel{fig:3sand1w8}{{8}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-C}}Qualitative Assessment}{7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-D}}Runtime and Memory Usage}{7}\protected@file@percent }
+\newlabel{sec:rt}{{\mbox  {VII-D}}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Average runtime of the full algorithm dependent on input scan.\relax }}{7}\protected@file@percent }
+\newlabel{fig:runtime}{{9}{7}}
+\@writefile{toc}{\contentsline {section}{\numberline {VIII}Discussion}{7}\protected@file@percent }
+\bibstyle{IEEEtran}
+\bibdata{IEEEabrv,bibliography}
